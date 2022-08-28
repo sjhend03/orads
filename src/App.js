@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Calculator from './components/Calculator/Calculator';
+import Quickguide from './components/Quick Guide/Quickguide';
+import Header from './components/Header/Header';
+import { 
+  Routes,
+  Route
+} from 'react-router-dom';
+import Authors from './components/Authors/Authors';
+import Technical from './components/Technical/Technical';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Calculator/>} />
+        <Route path='/quick-guide' element={<Quickguide/>} />
+        <Route path='/authors' element={<Authors />} />
+        <Route path='technical-requirements' element={<Technical />} />
+      </Routes>
     </div>
   );
 }
