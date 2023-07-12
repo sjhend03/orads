@@ -11,7 +11,7 @@ function Authors() {
             <h1>O-RADS MRI Calculator and Quick Guide Authors</h1>
             <div className='author-card'>
                 <img alt='Dr. Elizabeth Sadowski' src={elizabeth} className='author-image' />
-                <p>Dr. Elizabeth Sadowski is Professor and Director of Gynecology Imaging, Departments of Radiology and Obsterics and Gynecology, University of Wisconin-Madison, USA</p>
+                <p>Dr. Elizabeth Sadowski is Professor and Director of Gynecology Imaging, Departments of Radiology and Obsterics and Gynecology, University of Wisconsin-Madison, USA</p>
             </div>
             <div className='author-card'>
                 <img alt='Dr. Caroline Reinhold' src={caroline} className='author-image' />
