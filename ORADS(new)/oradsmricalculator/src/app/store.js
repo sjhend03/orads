@@ -7,5 +7,3 @@ export default configureStore({
         calculatorQuestions: calculatorQuestionsReducer,
     }
 });
-
-//TEST

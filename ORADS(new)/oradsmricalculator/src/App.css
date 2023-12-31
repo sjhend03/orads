@@ -297,20 +297,8 @@ select {
   font-size: 1.3rem;
 }
 
-.to-top-btn {
-  text-decoration: none;
-  color: var(--dark-blue);
-  background-color: var(--green);
-  font-size: 1.3rem;
-  padding: 3px 5px;
-  transition: all 0.5s ease-in-out;
-}
 
-.to-top-btn:hover {
-  cursor: pointer;
-  background-color: var(--dark-blue);
-  color: var(--green);
-}
+
 
 .question-guide-header {
   display: flex;
