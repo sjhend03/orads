@@ -1,0 +1,14 @@
+.questions {
+  border: 1px solid #70ad47;
+  margin: 40px var(--margin);
+  padding: 20px;
+}
+
+.questions-description {
+  font-style: italic;
+}
+
+.questions-wrapper p {
+  margin: 10px 0;
+  font-size: 0.8rem;
+}

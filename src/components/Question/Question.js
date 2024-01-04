@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCalculatorQuestions, setQuestion } from '../../features/calculatorQuestionsSlice';
+import './Question.css'
 
-function Question(props) {
+function Question({ title, description, callback, type, style, options }) {
 
-    // Redux State for Questions
+    /*// Redux State for Questions
     const dispatch = useDispatch();
     const questions = useSelector(selectCalculatorQuestions);
 
@@ -73,11 +74,28 @@ function Question(props) {
     }
 
     // Default Question Display
-    return (
+    /*return (
         <div className='question-wrapper' style={checkSubQuestion() && !props.shown ? {display: 'none'} : {}}>
             <p><span className='question-title'>{checkSubQuestion() ? '' : `Question ${props.number}:`}</span> {props.description}</p>
             <button className={questions[`Q${props.number}`] ? 'question-yes question-button btn-yes' : 'question-button btn-yes'} onClick={() => updateQuestion(true)}>yes</button>
             <button className={questions[`Q${props.number}`] === false ? 'question-no question-button btn-no' : 'question-button btn-no'} onClick={() => updateQuestion(false)}>no</button>
+        </div>
+    )*/
+    return (
+        <div className='question' >
+            <p className='question-title'>{title}<span className='question-description'>{description}</span></p>
+            {type === 'boolean' ? (
+                <>
+                <button value='true' className='question-btn-yes' onClick={callback}>yes</button>
+                <button value='false' className='question-btn-no' onClick={callback}>no</button>
+                </>
+            ) : ''}
+            {type === 'dropdown' ? (
+                <select className='question-dropdown' onChange={callback}>
+                    <option value='select'>Select an option</option>
+                    {options.map(option => <option value={option.value}>{option.description}</option>)}
+                </select>
+            ) : ''}
         </div>
     )
 }

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { selectCalculatorQuestions } from '../../features/calculatorQuestionsSlice'
 import Question from '../Question/Question'
+import './Questions.css'
 
-// Question Descriptions
+/*// Question Descriptions
 const questionDescriptions = {
     Q1: 'Presence of peritoneal, mesenteric or omental nodularity or irregular thickening, with or without ascites?', 
     Q2: 'Is the adnexal finding a follicle or corpus luteum or hemorrhagic cyst ≤ 3cm in a premenopausal woman?', 
@@ -16,11 +17,11 @@ const questionDescriptions = {
     Q4b: 'Pick the cyst type:',
     Q4ba: 'Is there wall enhancement?',
     Q4baa: 'Is the fluid content simple or endometriotic?'
-}
+}*/
 
-function Questions(props) {
+function Questions({questions}) {
 
-    // States of Questions
+    /*// States of Questions
     const [dropdown1, setDropdown1] = useState('select');
     const [dropdown2, setDropdown2] = useState('select');
     const [Q3a, setQ3a] = useState(false);
@@ -117,6 +118,11 @@ function Questions(props) {
             <Question number={'4ba'} description={questionDescriptions.Q4ba} shown={Q4ba}/>
             <Question number={'4baa'} description={questionDescriptions.Q4baa} shown={Q4baa}/>
             <div>{questions.Q1}</div>
+        </div>
+    ) */
+    return (
+        <div className='questions'>
+            {questions.map(question => <Question title={question.title} description={question.description} callback={question.callback} type={question.type} style={question.style} options={question.options} />)}
         </div>
     )
 }

@@ -1,41 +1,50 @@
 import React from 'react'
 import './Guide.css'
 
-function Guide({sections}) {
+function Guide({sections, name}) {
     return (
-        sections.map(section => {
+        <div className='guide'>
+        {name ? (
+        <div className='guide-header'>
+            <h3>Guide to {name}</h3>
+            <a href='#top' className='to-top-btn'>Back to Top</a>
+        </div>
+        ) : 'no name'}
+
+        {sections.map(section => {
             return (
-                <div className='guide'>
-                    {section.description ? (
-                    <div className='guide-description'>
-                        {section.description.definition ? (
-                        <div className='guide-defintion'>
-                            <p><b>{section.description.definition.term}</b> {section.description.definition.description}</p>
+                    <div className='section'>
+                        {section.description ? (
+                        <div className='guide-description'>
+                            {section.description.definition ? (
+                            <div className='guide-defintion'>
+                                <p><b>{section.description.definition.term}</b> {section.description.definition.description}</p>
+                            </div>
+                            ) : ''}
+                            <p style={section.description.style}>{section.description.text}</p>
                         </div>
                         ) : ''}
-                        <p style={section.description.style}>{section.description.text}</p>
+                        {section.grid ? (
+                        <div className='guide-grid' style={{'gridTemplateColumns':  `repeat(${section.columns}, 1fr)`}}>
+                            {section.grid.map(cell => {
+                                return (
+                                    <div className='guide-grid-cell'>
+                                        {cell.imgs ? (
+                                            cell.imgs.map(img => <img className='grid-image' alt={img.src} src={img.src}/>)
+                                        ) : ''}
+                                        {cell.text ? (
+                                            <p className='grid-text' style={cell.style ? cell.style : {}}>{cell.text}</p>
+                                        ) : ''}
+                                    </div>
+                                )
+                            })}
+                        
+                        </div>
+                        ) : ''}
                     </div>
-                    ) : ''}
-                    {section.grid ? (
-                    <div className='guide-grid'>
-                        {section.grid.map(cell => {
-                            return (
-                                <div className='guide-grid-cell'>
-                                    {cell.imgs ? (
-                                        cell.imgs.map(img => <img className='grid-image' alt={img.src} src={img.src}/>)
-                                    ) : ''}
-                                    {cell.text ? (
-                                        <p className='grid-text'>{cell.text}</p>
-                                    ) : ''}
-                                </div>
-                            )
-                        })}
-                       
-                    </div>
-                    ) : ''}
-                </div>
             )
-        })
+        })}
+        </div>
     )
 }
 

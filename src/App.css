@@ -178,7 +178,6 @@ button:hover {
   cursor: pointer;
 }
 
-.questions-wrapper,
 .governing-concepts-wrapper,
 .definitions-wrapper,
 .guide-to-questions-wrapper,
@@ -187,73 +186,6 @@ button:hover {
   border: 1px solid #70ad47;
   margin: 40px var(--margin);
   padding: 20px;
-}
-
-.questions-description {
-  font-style: italic;
-}
-
-.question-wrapper {
-  margin: 13px 0;
-  display: flex;
-  font-size: 1.1rem;
-}
-
-.question-btn {
-  font-size: 10px;
-}
-
-.question-button {
-  margin: 0 10px;
-  height: 30px;
-  width: 50px;
-  border: none;
-  background-color: var(--light-blue);
-  color: white;
-  transition: all 0.25s ease-in-out;
-}
-
-.dropdown-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-select {
-  width: 80%;
-}
-
-.btn-yes:hover {
-  background-color: var(--green);
-  color: var(--dark-blue);
-}
-
-.btn-no:hover {
-  background-color: rgb(255, 69, 69);
-  color: var(--dark-blue);
-}
-
-.question-yes {
-  background-color: var(--green);
-  color: var(--dark-blue);
-}
-
-.question-no {
-  background-color: rgb(255, 69, 69);
-  color: var(--dark-blue);
-}
-.questions-wrapper p {
-  margin: 10px 0;
-  font-size: 0.8rem;
-}
-
-.question-wrapper p {
-  margin: 10px 0;
-  font-size: 1rem;
-}
-
-
-.question-wrapper p span {
-  color: var(--green);
 }
 
 .calculator-wrapper footer {
@@ -297,20 +229,8 @@ select {
   font-size: 1.3rem;
 }
 
-.to-top-btn {
-  text-decoration: none;
-  color: var(--dark-blue);
-  background-color: var(--green);
-  font-size: 1.3rem;
-  padding: 3px 5px;
-  transition: all 0.5s ease-in-out;
-}
 
-.to-top-btn:hover {
-  cursor: pointer;
-  background-color: var(--dark-blue);
-  color: var(--green);
-}
+
 
 .question-guide-header {
   display: flex;
@@ -383,6 +303,9 @@ select {
 
 .orads-popup {
   background-color: rgba(0, 0, 0, 0.693);
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
 }
 
 /* Authors */

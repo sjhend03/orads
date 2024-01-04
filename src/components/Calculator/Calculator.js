@@ -8,9 +8,9 @@ import popup3 from '../../images/popups/ORADS 3.png';
 import popup4 from '../../images/popups/ORADS 4.png';
 import popup5 from '../../images/popups/ORADS 5.png';
 
-function Calculator() {
+function Calculator({questions}) {
 
-    // States of Orads Popups
+    /*// States of Orads Popups
     const [orads1, setOrads1] = useState('none');
     const [orads2, setOrads2] = useState('none');
     const [orads3, setOrads3] = useState('none');
@@ -66,7 +66,7 @@ function Calculator() {
     return (
         <div className='calculator-wrapper'>
             <button onClick={hideOrads} className='reset-btn'>Reset</button>
-            <Questions resetting={resetting} setResetting={setResetting} />
+            <Questions resetting={resetting} setResetting={setResetting} questions={questions} />
             <footer>
                 <p>This material is provided as guidance and is educational in nature. Final lesion management should be based on patient's clinical scenario and clinical evaluation directed by a
 physician. If the study is technically inadequate, DO NOT USE this calculator. Assess as an O-RADS MRI 0.</p>
@@ -127,6 +127,9 @@ Katherine Maturen, Andrea Rockall, Isabelle Thomassin.</p>
                 <img alt='ORADS 5' src={popup5}/>
             </div>
         </div>
+    )*/
+    return (
+        <Questions questions={questions} />
     )
 }
 

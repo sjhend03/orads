@@ -1,10 +1,18 @@
 .guide-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
 }
 
 .guide-grid-cell {
     border: 1px solid var(--green);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    margin: 20px 0px;
 }
 
 .grid-text {
@@ -12,5 +20,38 @@
 }
 
 .grid-image {
-    height: 50px;
+    height: 100px;
+}
+
+.guide {
+    margin: 30px 20px;
+    border: 1px solid var(--green);
+    padding: 20px 15px
+}
+
+.to-top-btn {
+    text-decoration: none;
+    color: var(--dark-blue);
+    background-color: var(--green);
+    font-size: 1.3rem;
+    padding: 3px 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.to-top-btn:hover {
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    color: var(--green);
+}
+
+.guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.guide-header h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
 }

@@ -1,0 +1,53 @@
+.question {
+  margin: 13px 0;
+  display: flex;
+  font-size: 1.1rem;
+  align-items: center;
+}
+  
+.question-btn-yes,
+.question-btn-no {
+  font-size: 10px;
+  margin: 0 10px;
+  height: 30px;
+  width: 50px;
+  border: none;
+  background-color: var(--light-blue);
+  color: white;
+  transition: all 0.25s ease-in-out;
+}
+  
+.question-dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.question-btn-no:hover,
+.question-btn-yes:hover {
+    opacity: 0.7;
+}
+  
+.question-btn-yes {
+  background-color: var(--green);
+  color: var(--dark-blue);
+}
+  
+.question-btn-no {
+  background-color: rgb(255, 69, 69);
+  color: var(--dark-blue);
+}
+  
+.question p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: var(--green);
+}
+
+
+.question p span {
+  color: white;
+}
+  
